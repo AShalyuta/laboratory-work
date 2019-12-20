@@ -42,18 +42,18 @@ int main(int argc, char const *argv[])
         for (i=0;i<n;i++)
         for(j=0;j<m;j++)
         {
-            if(b[i][j]>max) {max=b[i][j]; z=i+1; x=j+1;}
+            if(b[i][j]>max) {max=b[i][j]; z=i; x=j;}
         }
-        b[z-1][x-1]=0;
+        b[z][x]=0;
         for (i=0;i<n;i++)
         for(j=0;j<m;j++)
         {
-            if(b[i][j]>max1) {max1=b[i][j]; z=i+1; x=j+1;}
+            if(b[i][j]>max1) {max1=b[i][j];}
         }
-    if(max==max1) {printf("max chislo= %d\n",max1); break;}
+    if(max==max1) {printf("max chislo povtor 2 raza = %d\n",max1); break;}
     max=0;
     max1=0;
     }
-    printf("kol-vo strok ne soderj nylevux elementami= %d\n",g);
+    printf("kol-vo strok ne soderj nylevux elementami = %d\n",g);
     return 0;
 }
